@@ -8,7 +8,7 @@ module.exports = {
   networks: {
     sepolia: {
       url: `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
-      accounts: [SEPOLIA_PRIVATE_KEY],
+      accounts: [`0x${SEPOLIA_PRIVATE_KEY}`], // Make sure this is prefixed with "0x"
     },
   },
   etherscan: {
