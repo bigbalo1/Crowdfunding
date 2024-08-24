@@ -1,5 +1,7 @@
 const { expect } = require("chai");
+const { ethers } = require("hardhat");
 const { time, loadFixture } = require("@nomicfoundation/hardhat-toolbox/network-helpers");
+
 
 describe("Crowdfunding", function () {
   // Define a fixture to deploy the Crowdfunding contract
@@ -16,6 +18,7 @@ describe("Crowdfunding", function () {
     it("Should deploy the contract", async function () {
       const { crowdfunding } = await loadFixture(deployCrowdfundingFixture);
       expect(crowdfunding.address).to.be.properAddress;
+
     });
   });
 
